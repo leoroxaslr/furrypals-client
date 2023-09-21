@@ -19,15 +19,15 @@ const Login = () => {
                 <form className="space-y-4 md:space-y-6" action="#">
                   <div>
                     <label
-                      htmlFor="email"
+                      htmlFor="username"
                       className="block mb-2 text-sm font-medium text-gray-800"
                     >
-                      Your email
+                      Your username
                     </label>
                     <input
-                      type="email"
-                      name="email"
-                      id="email"
+                      type="text"
+                      name="username"
+                      id="username"
                       className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-blue-950 block w-full p-2"
                       placeholder="name@email.com"
                       required=""

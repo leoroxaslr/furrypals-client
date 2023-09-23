@@ -8,7 +8,6 @@ import "./App.css";
 function App() {
   return (
     <>
-      {/* {user? <Navbar /> : <Navbarlogin/>} */}
       <Navbar />
       <main>
         <Routes>

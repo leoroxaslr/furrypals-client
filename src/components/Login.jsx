@@ -83,7 +83,7 @@ const Login = () => {
                     <Link
                       as={Link}
                       to="/apply"
-                      className="font-medium text-gray-800 hover:underline"
+                      className="pl-1 font-medium text-gray-800 hover:underline"
                     >
                       Sign up
                     </Link>

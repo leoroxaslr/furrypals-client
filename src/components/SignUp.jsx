@@ -76,9 +76,9 @@ const SignUp = () => {
                       className="text-sm font-medium text-gray-900 flex justify-between "
                     >
                       Your username
-                      <span className={validName ? "valid" : "hide"}>
+                      <span className={validName ? "vali d" : "hide"}>
                         <svg
-                          class="w-[14px] h-[14px] text-gray-800 dark:text-white "
+                          className="w-[14px] h-[14px] text-gray-800 dark:text-white "
                           aria-hidden="true"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="green"
@@ -89,7 +89,7 @@ const SignUp = () => {
                       </span>
                       <span className={validName || !user ? "hide" : "invalid"}>
                         <svg
-                          class="w-[14px] h-[14px] text-gray-800 dark:text-white"
+                          className="w-[14px] h-[14px] text-gray-800 dark:text-white"
                           aria-hidden="true"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="red"
@@ -195,7 +195,7 @@ const SignUp = () => {
                     <Link
                       as={Link}
                       to="/signin"
-                      className="font-medium text-gray-800 hover:underline"
+                      className="pl-1 font-medium text-gray-800 hover:underline"
                     >
                       Login here
                     </Link>

@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import LoginPic from "../assets/pet care-pana.svg";
+import LoginPic from "../../assets/pet care-pana.svg";
 import { useRef, useState, useEffect } from "react";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
 
-const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9-_]{3,23}/;
+const USER_REGEX = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 
 const SignUp = () => {
@@ -55,16 +57,11 @@ const SignUp = () => {
     setIsChecked(!isChecked);
   };
 
-  const handleSubmit = async (e) => {
+  const signUp = (e) => {
     e.preventDefault();
-    const v1 = USER_REGEX.test(user);
-    const v2 = PWD_REGEX.test(pwd);
-    if (!v1 || v2) {
-      setErrMsg("Invalid Entry");
-      return;
-    }
-    console.log(user, pwd);
-    setSuccess(true);
+    createUserWithEmailAndPassword(auth, user, pwd).catch((error) => {
+      console.log(error);
+    });
   };
 
   return (
@@ -90,14 +87,14 @@ const SignUp = () => {
                 <form
                   className="space-y-4 md:space-y-6"
                   action="#"
-                  onSubmit={handleSubmit}
+                  onSubmit={signUp}
                 >
                   <div className="uname">
                     <label
                       htmlFor="username"
                       className="text-sm font-medium text-gray-900 flex justify-between "
                     >
-                      Your username
+                      Your Email
                       <span className={validName ? "valid" : "hide"}>
                         <svg
                           className="w-[14px] h-[14px] text-gray-800 dark:text-white "
@@ -123,7 +120,7 @@ const SignUp = () => {
                     </label>
 
                     <input
-                      type="text"
+                      type="email"
                       id="username"
                       ref={userRef}
                       autoComplete="off"

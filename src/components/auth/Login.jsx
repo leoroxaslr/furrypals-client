@@ -1,8 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import LoginPic from "../assets/Veterinary-amico.svg";
+import LoginPic from "../../assets/Veterinary-amico.svg";
+import { useRef, useState, useEffect } from "react";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
 
 const Login = () => {
+  const [email, setEmail] = useState(false);
+  const [password, setPassword] = useState(false);
+
+  const signIn = (e) => {
+    e.preventDefault();
+    signInWithEmailAndPassword(auth, email, password).catch((error) => {
+      console.log(error);
+    });
+  };
   return (
     <>
       <section className="bg-white m-16">
@@ -16,7 +28,7 @@ const Login = () => {
                 <h1 className="text-3xl mb-10 font-bold leading-tight tracking-tight text-blue-950 md:text-3xl">
                   Login
                 </h1>
-                <form className="space-y-4 md:space-y-6" action="#">
+                <form className="space-y-4 md:space-y-6" onSubmit={signIn}>
                   <div>
                     <label
                       htmlFor="username"
@@ -31,6 +43,7 @@ const Login = () => {
                       className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-blue-950 block w-full p-2"
                       placeholder="name@email.com"
                       required=""
+                      onChange={(e) => setEmail(e.target.value)}
                     />
                   </div>
                   <div>
@@ -47,6 +60,7 @@ const Login = () => {
                       placeholder="••••••••"
                       className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-950 focus:border-primary-600 block w-full p-2"
                       required=""
+                      onChange={(e) => setPassword(e.target.value)}
                     />
                   </div>
                   <div className="flex items-start">

@@ -10,10 +10,7 @@
   padding: 0.25rem;
   position: absolute;
   z-index: 5;
-}
-
-.instructions > svg {
-  margin-right: 0.25rem;
+  margin-top: 3px;
 }
 
 .offscreen {

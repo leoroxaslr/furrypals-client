@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/FurryPals.png";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import { auth } from "../firebase";
+
 function colapse(x) {
   var x = document.getElementById("navbar-default");
 
@@ -10,6 +13,15 @@ function colapse(x) {
     x.style.display = "block";
   }
 }
+
+const userSignOut = () => {
+  signOut(auth)
+    .then(() => {
+      console.log("sign out successful");
+    })
+    .catch((error) => console.log(error));
+};
+
 const Navbar = () => {
   return (
     <>
@@ -98,8 +110,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-violet-700 md:p-0 "
-                    as={Link}
-                    to="/signin"
+                    onClick={userSignOut}
                   >
                     Logout
                   </Link>

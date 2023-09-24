@@ -34,10 +34,10 @@ const Login = () => {
                       htmlFor="username"
                       className="block mb-2 text-sm font-medium text-gray-800"
                     >
-                      Your username
+                      Your Email
                     </label>
                     <input
-                      type="text"
+                      type="email"
                       name="username"
                       id="username"
                       className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-blue-950 block w-full p-2"

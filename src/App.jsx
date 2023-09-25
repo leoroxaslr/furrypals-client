@@ -30,23 +30,34 @@ function App() {
 
   return (
     <>
-      {authUser ? <Navbarlogin /> : <Navbar />}
+      <AuthDetails />
 
-      <main>
-        <Routes>
-          {routes.map((route, index) => {
-            return (
-              <Route
-                key={index}
-                path={route.path}
-                element={route.element}
-                exact
-              />
-            );
-          })}
-        </Routes>
-      </main>
-      <Footer />
+      {authUser ? (
+        <>
+          <AuthDetails />
+          <UserDash />
+        </>
+      ) : (
+        <>
+          {" "}
+          <Navbar />
+          <main>
+            <Routes>
+              {routes.map((route, index) => {
+                return (
+                  <Route
+                    key={index}
+                    path={route.path}
+                    element={route.element}
+                    exact
+                  />
+                );
+              })}
+            </Routes>
+          </main>
+          <Footer />
+        </>
+      )}
     </>
   );
 }

@@ -1,5 +1,5 @@
-import Login from "./components/Auth/Login";
-import SignUp from "./components/Auth/SignUp";
+import Login from "./components/auth/Login";
+import SignUp from "./components/auth/SignUp";
 import Home from "./components/Home";
 
 const routes = [

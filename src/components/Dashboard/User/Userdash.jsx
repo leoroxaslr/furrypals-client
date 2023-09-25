@@ -4,15 +4,15 @@ import Logo from "../../../assets/FurryPals.png";
 const Userdash = () => {
   return (
     <>
-      <div className="antialiased bg-purple-100">
-        <nav className="bg-white border-b border-gray-200 px-4 py-2.5  fixed left-0 right-0 top-0 z-50">
+      <div className="antialiase bg-slate-50">
+        <nav className="bg-white border-b shadow-xl border-gray-200 px-4 py-2.5 fixed left-0 right-0 top-0 z-50">
           <div className="flex flex-wrap justify-between items-center">
             <div className="flex justify-start items-center">
               <button
                 data-drawer-target="drawer-navigation"
                 data-drawer-toggle="drawer-navigation"
                 aria-controls="drawer-navigation"
-                className="p-2 mr-2 text-gray-600 rounded-lg cursor-pointer md:hidden hover:text-gray-900 hover:bg-gray-100 focus:bg-gray-100  focus:ring-2 focus:ring-gray-100 "
+                className="p-2 mr-2 text-gray-600 rounded-lg cursor-pointer md:hidden hover:text-gray-900 hover:bg-gray-100 focus:bg-gray-100 focus:ring-2 focus:ring-gray-100 "
               >
                 <svg
                   aria-hidden="true"
@@ -43,23 +43,16 @@ const Userdash = () => {
                 <span className="sr-only">Toggle sidebar</span>
               </button>
               <a href="/" className="flex items-center justify-between mr-4">
-                <img
-                  src="https://flowbite.s3.amazonaws.com/logo.svg"
-                  className="mr-3 h-8"
-                  alt=""
-                />
-                <span className="self-center text-2xl font-semibold whitespace-nowrap ">
-                  Flowbite
-                </span>
+                <img src={Logo} className="h-24 sm:h-24" alt="" />
               </a>
               <form action="#" method="GET" className="hidden md:block md:pl-2">
                 <label for="topbar-search" className="sr-only">
                   Search
                 </label>
-                <div className="relative md:w-64 md:w-96">
+                <div className="relative md:w-64 lg:w-96">
                   <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                     <svg
-                      className="w-5 h-5 text-gray-500 dark:text-gray-400"
+                      className="w-5 h-5 text-gray-500 "
                       fill="currentColor"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +68,7 @@ const Userdash = () => {
                     type="text"
                     name="email"
                     id="topbar-search"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2.5"
                     placeholder="Search"
                   />
                 </div>
@@ -86,7 +79,7 @@ const Userdash = () => {
                 type="button"
                 data-drawer-toggle="drawer-navigation"
                 aria-controls="drawer-navigation"
-                className="p-2 mr-1 text-gray-500 rounded-lg md:hidden hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                className="p-2 mr-1 text-gray-500 rounded-lg md:hidden hover:text-gray-900 hover:bg-gray-100 focus:ring-4 focus:ring-gray-300 "
               >
                 <span className="sr-only">Toggle search</span>
                 <svg
@@ -107,7 +100,7 @@ const Userdash = () => {
               <button
                 type="button"
                 data-dropdown-toggle="notification-dropdown"
-                className="p-2 mr-1 text-gray-500 rounded-lg hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                className="p-2 mr-1 text-gray-500 rounded-lg hover:text-gray-900 hover:bg-gray-100 focus:ring-4 focus:ring-gray-300 "
               >
                 <span className="sr-only">View notifications</span>
                 {/*-- Bell icon -*/}
@@ -123,16 +116,16 @@ const Userdash = () => {
               </button>
               {/*-- Dropdown menu -*/}
               <div
-                className="hidden overflow-hidden z-50 my-4 max-w-sm text-base list-none bg-white rounded divide-y divide-gray-100 shadow-lg dark:divide-gray-600 dark:bg-gray-700 rounded-xl"
+                className="hidden overflow-hidden z-50 my-4 max-w-sm text-base list-none bg-white rounded divide-y divide-gray-100 shadow-lg lg:rounded-xl"
                 id="notification-dropdown"
               >
-                <div className="block py-2 px-4 text-base font-medium text-center text-gray-700 bg-gray-50 dark:bg-gray-600 dark:text-gray-300">
+                <div className="block py-2 px-4 text-base font-medium text-center text-gray-700 bg-gray-50">
                   Notifications
                 </div>
                 <div>
                   <a
                     href="#"
-                    className="flex py-3 px-4 border-b hover:bg-gray-100 dark:hover:bg-gray-600 dark:border-gray-600"
+                    className="flex py-3 px-4 border-b hover:bg-gray-100 "
                   >
                     <div className="flex-shrink-0">
                       <img
@@ -140,7 +133,7 @@ const Userdash = () => {
                         src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
                         alt="Bonnie Green avatar"
                       />
-                      <div className="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 rounded-full border border-white bg-primary-700 dark:border-gray-700">
+                      <div className="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 rounded-full border border-white bg-primary-700 ">
                         <svg
                           aria-hidden="true"
                           className="w-3 h-3 text-white"
@@ -154,21 +147,21 @@ const Userdash = () => {
                       </div>
                     </div>
                     <div className="pl-3 w-full">
-                      <div className="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400">
+                      <div className="text-gray-500 font-normal text-sm mb-1.5 ">
                         New message from
-                        <span className="font-semibold text-gray-900 dark:text-white">
+                        <span className="font-semibold text-gray-900 ">
                           Bonnie Green
                         </span>
                         : "Hey, what's up? All set for the presentation?"
                       </div>
-                      <div className="text-xs font-medium text-primary-600 dark:text-primary-500">
+                      <div className="text-xs font-medium text-primary-600 ">
                         a few moments ago
                       </div>
                     </div>
                   </a>
                   <a
                     href="#"
-                    className="flex py-3 px-4 border-b hover:bg-gray-100 dark:hover:bg-gray-600 dark:border-gray-600"
+                    className="flex py-3 px-4 border-b hover:bg-gray-100 "
                   >
                     <div className="flex-shrink-0">
                       <img
@@ -176,7 +169,7 @@ const Userdash = () => {
                         src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png"
                         alt="Jese Leos avatar"
                       />
-                      <div className="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-gray-900 rounded-full border border-white dark:border-gray-700">
+                      <div className="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-gray-900 rounded-full border border-white ">
                         <svg
                           aria-hidden="true"
                           className="w-3 h-3 text-white"
@@ -189,24 +182,24 @@ const Userdash = () => {
                       </div>
                     </div>
                     <div className="pl-3 w-full">
-                      <div className="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400">
-                        <span className="font-semibold text-gray-900 dark:text-white">
+                      <div className="text-gray-500 font-normal text-sm mb-1.5 ">
+                        <span className="font-semibold text-gray-900 ">
                           Jese leos
                         </span>
                         and
-                        <span className="font-medium text-gray-900 dark:text-white">
+                        <span className="font-medium text-gray-900 ">
                           5 others
                         </span>
                         started following you.
                       </div>
-                      <div className="text-xs font-medium text-primary-600 dark:text-primary-500">
+                      <div className="text-xs font-medium text-primary-600 ">
                         10 minutes ago
                       </div>
                     </div>
                   </a>
                   <a
                     href="#"
-                    className="flex py-3 px-4 border-b hover:bg-gray-100 dark:hover:bg-gray-600 dark:border-gray-600"
+                    className="flex py-3 px-4 border-b hover:bg-gray-100 "
                   >
                     <div className="flex-shrink-0">
                       <img
@@ -214,7 +207,7 @@ const Userdash = () => {
                         src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/joseph-mcfall.png"
                         alt="Joseph McFall avatar"
                       />
-                      <div className="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-red-600 rounded-full border border-white dark:border-gray-700">
+                      <div className="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-red-600 rounded-full border border-white ">
                         <svg
                           aria-hidden="true"
                           className="w-3 h-3 text-white"
@@ -231,24 +224,24 @@ const Userdash = () => {
                       </div>
                     </div>
                     <div className="pl-3 w-full">
-                      <div className="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400">
-                        <span className="font-semibold text-gray-900 dark:text-white">
+                      <div className="text-gray-500 font-normal text-sm mb-1.5 ">
+                        <span className="font-semibold text-gray-900 ">
                           Joseph Mcfall
                         </span>
                         and
-                        <span className="font-medium text-gray-900 dark:text-white">
+                        <span className="font-medium text-gray-900 ">
                           141 others
                         </span>
                         love your story. See it and view more stories.
                       </div>
-                      <div className="text-xs font-medium text-primary-600 dark:text-primary-500">
+                      <div className="text-xs font-medium text-primary-600 ">
                         44 minutes ago
                       </div>
                     </div>
                   </a>
                   <a
                     href="#"
-                    className="flex py-3 px-4 border-b hover:bg-gray-100 dark:hover:bg-gray-600 dark:border-gray-600"
+                    className="flex py-3 px-4 border-b hover:bg-gray-100 "
                   >
                     <div className="flex-shrink-0">
                       <img
@@ -256,7 +249,7 @@ const Userdash = () => {
                         src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/roberta-casas.png"
                         alt="Roberta Casas image"
                       />
-                      <div className="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-green-400 rounded-full border border-white dark:border-gray-700">
+                      <div className="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-green-400 rounded-full border border-white ">
                         <svg
                           aria-hidden="true"
                           className="w-3 h-3 text-white"
@@ -273,32 +266,29 @@ const Userdash = () => {
                       </div>
                     </div>
                     <div className="pl-3 w-full">
-                      <div className="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400">
-                        <span className="font-semibold text-gray-900 dark:text-white">
+                      <div className="text-gray-500 font-normal text-sm mb-1.5 ">
+                        <span className="font-semibold text-gray-900 ">
                           Leslie Livingston
                         </span>
                         mentioned you in a comment:
-                        <span className="font-medium text-primary-600 dark:text-primary-500">
+                        <span className="font-medium text-primary-600 ">
                           @bonnie.green
                         </span>
                         what do you say?
                       </div>
-                      <div className="text-xs font-medium text-primary-600 dark:text-primary-500">
+                      <div className="text-xs font-medium text-primary-600 ">
                         1 hour ago
                       </div>
                     </div>
                   </a>
-                  <a
-                    href="#"
-                    className="flex py-3 px-4 hover:bg-gray-100 dark:hover:bg-gray-600"
-                  >
+                  <a href="#" className="flex py-3 px-4 hover:bg-gray-100 ">
                     <div className="flex-shrink-0">
                       <img
                         className="w-11 h-11 rounded-full"
                         src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/robert-brown.png"
                         alt="Robert image"
                       />
-                      <div className="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-purple-500 rounded-full border border-white dark:border-gray-700">
+                      <div className="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-purple-500 rounded-full border border-white ">
                         <svg
                           aria-hidden="true"
                           className="w-3 h-3 text-white"
@@ -311,14 +301,14 @@ const Userdash = () => {
                       </div>
                     </div>
                     <div className="pl-3 w-full">
-                      <div className="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400">
-                        <span className="font-semibold text-gray-900 dark:text-white">
+                      <div className="text-gray-500 font-normal text-sm mb-1.5 ">
+                        <span className="font-semibold text-gray-900 ">
                           Robert Brown
                         </span>
                         posted a new video: Glassmorphism - learn how to
                         implement the new design trend.
                       </div>
-                      <div className="text-xs font-medium text-primary-600 dark:text-primary-500">
+                      <div className="text-xs font-medium text-primary-600 ">
                         3 hours ago
                       </div>
                     </div>
@@ -326,12 +316,12 @@ const Userdash = () => {
                 </div>
                 <a
                   href="#"
-                  className="block py-2 text-md font-medium text-center text-gray-900 bg-gray-50 hover:bg-gray-100 dark:bg-gray-600 dark:text-white dark:hover:underline"
+                  className="block py-2 text-md font-medium text-center text-gray-900 bg-gray-50 hover:bg-gray-100"
                 >
                   <div className="inline-flex items-center">
                     <svg
                       aria-hidden="true"
-                      className="mr-2 w-4 h-4 text-gray-500 dark:text-gray-400"
+                      className="mr-2 w-4 h-4 text-gray-500 "
                       fill="currentColor"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -351,7 +341,7 @@ const Userdash = () => {
               <button
                 type="button"
                 data-dropdown-toggle="apps-dropdown"
-                className="p-2 text-gray-500 rounded-lg hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                className="p-2 text-gray-500 rounded-lg hover:text-gray-900 hover:bg-gray-100 focus:ring-4 focus:ring-gray-300 "
               >
                 <span className="sr-only">View notifications</span>
                 {/*-- Icon -*/}
@@ -366,20 +356,20 @@ const Userdash = () => {
               </button>
               {/*-- Dropdown menu -*/}
               <div
-                className="hidden overflow-hidden z-50 my-4 max-w-sm text-base list-none bg-white rounded divide-y divide-gray-100 shadow-lg dark:bg-gray-700 dark:divide-gray-600 rounded-xl"
+                className="hidden overflow-hidden z-50 my-4 max-w-sm text-base list-none bg-white rounded divide-y divide-gray-100 shadow-lg lg:rounded-xl"
                 id="apps-dropdown"
               >
-                <div className="block py-2 px-4 text-base font-medium text-center text-gray-700 bg-gray-50 dark:bg-gray-600 dark:text-gray-300">
+                <div className="block py-2 px-4 text-base font-medium text-center text-gray-700 bg-gray-50">
                   Apps
                 </div>
                 <div className="grid grid-cols-3 gap-4 p-4">
                   <a
                     href="#"
-                    className="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 group"
+                    className="block p-4 text-center rounded-lg hover:bg-gray-100 group"
                   >
                     <svg
                       aria-hidden="true"
-                      className="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500 dark:text-gray-400 dark:group-hover:text-gray-400"
+                      className="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -390,34 +380,30 @@ const Userdash = () => {
                         clip-rule="evenodd"
                       ></path>
                     </svg>
-                    <div className="text-sm text-gray-900 dark:text-white">
-                      Sales
-                    </div>
+                    <div className="text-sm text-gray-900 ">Sales</div>
                   </a>
                   <a
                     href="#"
-                    className="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 group"
+                    className="block p-4 text-center rounded-lg hover:bg-gray-100 group"
                   >
                     <svg
                       aria-hidden="true"
-                      className="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500 dark:text-gray-400 dark:group-hover:text-gray-400"
+                      className="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500 "
                       fill="currentColor"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path>
                     </svg>
-                    <div className="text-sm text-gray-900 dark:text-white">
-                      Users
-                    </div>
+                    <div className="text-sm text-gray-900 ">Users</div>
                   </a>
                   <a
                     href="#"
-                    className="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 group"
+                    className="block p-4 text-center rounded-lg hover:bg-gray-100 group"
                   >
                     <svg
                       aria-hidden="true"
-                      className="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500 dark:text-gray-400 dark:group-hover:text-gray-400"
+                      className="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500 "
                       fill="currentColor"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -428,17 +414,15 @@ const Userdash = () => {
                         clip-rule="evenodd"
                       ></path>
                     </svg>
-                    <div className="text-sm text-gray-900 dark:text-white">
-                      Inbox
-                    </div>
+                    <div className="text-sm text-gray-900 ">Inbox</div>
                   </a>
                   <a
                     href="#"
-                    className="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 group"
+                    className="block p-4 text-center rounded-lg hover:bg-gray-100 group"
                   >
                     <svg
                       aria-hidden="true"
-                      className="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500 dark:text-gray-400 dark:group-hover:text-gray-400"
+                      className="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500 "
                       fill="currentColor"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -449,17 +433,15 @@ const Userdash = () => {
                         clip-rule="evenodd"
                       ></path>
                     </svg>
-                    <div className="text-sm text-gray-900 dark:text-white">
-                      Profile
-                    </div>
+                    <div className="text-sm text-gray-900 ">Profile</div>
                   </a>
                   <a
                     href="#"
-                    className="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 group"
+                    className="block p-4 text-center rounded-lg hover:bg-gray-100 group"
                   >
                     <svg
                       aria-hidden="true"
-                      className="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500 dark:text-gray-400 dark:group-hover:text-gray-400"
+                      className="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500 "
                       fill="currentColor"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -470,17 +452,15 @@ const Userdash = () => {
                         clip-rule="evenodd"
                       ></path>
                     </svg>
-                    <div className="text-sm text-gray-900 dark:text-white">
-                      Settings
-                    </div>
+                    <div className="text-sm text-gray-900 ">Settings</div>
                   </a>
                   <a
                     href="#"
-                    className="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 group"
+                    className="block p-4 text-center rounded-lg hover:bg-gray-100 group"
                   >
                     <svg
                       aria-hidden="true"
-                      className="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500 dark:text-gray-400 dark:group-hover:text-gray-400"
+                      className="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500 "
                       fill="currentColor"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -492,17 +472,15 @@ const Userdash = () => {
                         clip-rule="evenodd"
                       ></path>
                     </svg>
-                    <div className="text-sm text-gray-900 dark:text-white">
-                      Products
-                    </div>
+                    <div className="text-sm text-gray-900 ">Products</div>
                   </a>
                   <a
                     href="#"
-                    className="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 group"
+                    className="block p-4 text-center rounded-lg hover:bg-gray-100 group"
                   >
                     <svg
                       aria-hidden="true"
-                      className="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500 dark:text-gray-400 dark:group-hover:text-gray-400"
+                      className="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500 "
                       fill="currentColor"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -514,17 +492,15 @@ const Userdash = () => {
                         clip-rule="evenodd"
                       ></path>
                     </svg>
-                    <div className="text-sm text-gray-900 dark:text-white">
-                      Pricing
-                    </div>
+                    <div className="text-sm text-gray-900 ">Pricing</div>
                   </a>
                   <a
                     href="#"
-                    className="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 group"
+                    className="block p-4 text-center rounded-lg hover:bg-gray-100 group"
                   >
                     <svg
                       aria-hidden="true"
-                      className="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500 dark:text-gray-400 dark:group-hover:text-gray-400"
+                      className="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500 "
                       fill="currentColor"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -535,17 +511,15 @@ const Userdash = () => {
                         clip-rule="evenodd"
                       ></path>
                     </svg>
-                    <div className="text-sm text-gray-900 dark:text-white">
-                      Billing
-                    </div>
+                    <div className="text-sm text-gray-900 ">Billing</div>
                   </a>
                   <a
                     href="#"
-                    className="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 group"
+                    className="block p-4 text-center rounded-lg hover:bg-gray-100 group"
                   >
                     <svg
                       aria-hidden="true"
-                      className="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500 dark:text-gray-400 dark:group-hover:text-gray-400"
+                      className="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500 "
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -558,15 +532,13 @@ const Userdash = () => {
                         d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
                       ></path>
                     </svg>
-                    <div className="text-sm text-gray-900 dark:text-white">
-                      Logout
-                    </div>
+                    <div className="text-sm text-gray-900 ">Logout</div>
                   </a>
                 </div>
               </div>
               <button
                 type="button"
-                className="flex mx-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                className="flex mx-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 "
                 id="user-menu-button"
                 aria-expanded="false"
                 data-dropdown-toggle="dropdown"
@@ -580,25 +552,22 @@ const Userdash = () => {
               </button>
               {/*-- Dropdown menu -*/}
               <div
-                className="hidden z-50 my-4 w-56 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600 rounded-xl"
+                className="hidden z-50 my-4 w-56 text-base list-none bg-white rounded divide-y divide-gray-100 shadow lg:rounded-xl"
                 id="dropdown"
               >
                 <div className="py-3 px-4">
-                  <span className="block text-sm font-semibold text-gray-900 dark:text-white">
+                  <span className="block text-sm font-semibold text-gray-900 ">
                     Neil Sims
                   </span>
-                  <span className="block text-sm text-gray-900 truncate dark:text-white">
+                  <span className="block text-sm text-gray-900 truncate ">
                     name@flowbite.com
                   </span>
                 </div>
-                <ul
-                  className="py-1 text-gray-700 dark:text-gray-300"
-                  aria-labelledby="dropdown"
-                >
+                <ul className="py-1 text-gray-700 " aria-labelledby="dropdown">
                   <li>
                     <a
                       href="#"
-                      className="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                      className="block py-2 px-4 text-sm hover:bg-gray-100  "
                     >
                       My profile
                     </a>
@@ -606,20 +575,17 @@ const Userdash = () => {
                   <li>
                     <a
                       href="#"
-                      className="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                      className="block py-2 px-4 text-sm hover:bg-gray-100  "
                     >
                       Account settings
                     </a>
                   </li>
                 </ul>
-                <ul
-                  className="py-1 text-gray-700 dark:text-gray-300"
-                  aria-labelledby="dropdown"
-                >
+                <ul className="py-1 text-gray-700 " aria-labelledby="dropdown">
                   <li>
                     <a
                       href="#"
-                      className="flex items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      className="flex items-center py-2 px-4 text-sm hover:bg-gray-100 "
                     >
                       <svg
                         className="mr-2 w-5 h-5 text-gray-400"
@@ -639,7 +605,7 @@ const Userdash = () => {
                   <li>
                     <a
                       href="#"
-                      className="flex items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      className="flex items-center py-2 px-4 text-sm hover:bg-gray-100 "
                     >
                       <svg
                         className="mr-2 w-5 h-5 text-gray-400"
@@ -655,12 +621,12 @@ const Userdash = () => {
                   <li>
                     <a
                       href="#"
-                      className="flex justify-between items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      className="flex justify-between items-center py-2 px-4 text-sm hover:bg-gray-100 "
                     >
                       <span className="flex items-center">
                         <svg
                           aria-hidden="true"
-                          className="mr-2 w-5 h-5 text-primary-600 dark:text-primary-500"
+                          className="mr-2 w-5 h-5 text-primary-600 "
                           fill="currentColor"
                           viewBox="0 0 20 20"
                           xmlns="http://www.w3.org/2000/svg"
@@ -689,14 +655,11 @@ const Userdash = () => {
                     </a>
                   </li>
                 </ul>
-                <ul
-                  className="py-1 text-gray-700 dark:text-gray-300"
-                  aria-labelledby="dropdown"
-                >
+                <ul className="py-1 text-gray-700 " aria-labelledby="dropdown">
                   <li>
                     <a
                       href="#"
-                      className="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      className="block py-2 px-4 text-sm hover:bg-gray-100 "
                     >
                       Sign out
                     </a>
@@ -714,7 +677,7 @@ const Userdash = () => {
           aria-label="Sidenav"
           id="drawer-navigation"
         >
-          <div className="overflow-y-auto py-5 px-3 h-full bg-white dark:bg-gray-800">
+          <div className="overflow-y-auto py-5 px-3 h-full bg-white ">
             <form action="#" method="GET" className="md:hidden mb-2">
               <label for="sidebar-search" className="sr-only">
                 Search
@@ -722,7 +685,7 @@ const Userdash = () => {
               <div className="relative">
                 <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                   <svg
-                    className="w-5 h-5 text-gray-500 dark:text-gray-400"
+                    className="w-5 h-5 text-gray-500 "
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -738,7 +701,7 @@ const Userdash = () => {
                   type="text"
                   name="search"
                   id="sidebar-search"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2 "
                   placeholder="Search"
                 />
               </div>
@@ -747,11 +710,11 @@ const Userdash = () => {
               <li>
                 <a
                   href="#"
-                  className="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                  className="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg hover:bg-gray-100 group"
                 >
                   <svg
                     aria-hidden="true"
-                    className="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                    className="w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 "
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -765,13 +728,13 @@ const Userdash = () => {
               <li>
                 <button
                   type="button"
-                  className="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                  className="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 "
                   aria-controls="dropdown-pages"
                   data-collapse-toggle="dropdown-pages"
                 >
                   <svg
                     aria-hidden="true"
-                    className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
+                    className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 "
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -803,7 +766,7 @@ const Userdash = () => {
                   <li>
                     <a
                       href="#"
-                      className="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                      className="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 "
                     >
                       Settings
                     </a>
@@ -811,7 +774,7 @@ const Userdash = () => {
                   <li>
                     <a
                       href="#"
-                      className="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                      className="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 "
                     >
                       Kanban
                     </a>
@@ -819,7 +782,7 @@ const Userdash = () => {
                   <li>
                     <a
                       href="#"
-                      className="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                      className="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 "
                     >
                       Calendar
                     </a>
@@ -829,13 +792,13 @@ const Userdash = () => {
               <li>
                 <button
                   type="button"
-                  className="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                  className="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 "
                   aria-controls="dropdown-sales"
                   data-collapse-toggle="dropdown-sales"
                 >
                   <svg
                     aria-hidden="true"
-                    className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
+                    className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 "
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -867,7 +830,7 @@ const Userdash = () => {
                   <li>
                     <a
                       href="#"
-                      className="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                      className="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 "
                     >
                       Products
                     </a>
@@ -875,7 +838,7 @@ const Userdash = () => {
                   <li>
                     <a
                       href="#"
-                      className="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                      className="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 "
                     >
                       Billing
                     </a>
@@ -883,7 +846,7 @@ const Userdash = () => {
                   <li>
                     <a
                       href="#"
-                      className="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                      className="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 "
                     >
                       Invoice
                     </a>
@@ -893,11 +856,11 @@ const Userdash = () => {
               <li>
                 <a
                   href="#"
-                  className="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                  className="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg hover:bg-gray-100 group"
                 >
                   <svg
                     aria-hidden="true"
-                    className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                    className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 "
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -908,7 +871,7 @@ const Userdash = () => {
                   <span className="flex-1 ml-3 whitespace-nowrap">
                     Messages
                   </span>
-                  <span className="inline-flex justify-center items-center w-5 h-5 text-xs font-semibold rounded-full text-primary-800 bg-primary-100 dark:bg-primary-200 dark:text-primary-800">
+                  <span className="inline-flex justify-center items-center w-5 h-5 text-xs font-semibold rounded-full text-primary-800 bg-primary-100 ">
                     4
                   </span>
                 </a>
@@ -916,13 +879,13 @@ const Userdash = () => {
               <li>
                 <button
                   type="button"
-                  className="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                  className="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 "
                   aria-controls="dropdown-authentication"
                   data-collapse-toggle="dropdown-authentication"
                 >
                   <svg
                     aria-hidden="true"
-                    className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
+                    className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 "
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -957,7 +920,7 @@ const Userdash = () => {
                   <li>
                     <a
                       href="#"
-                      className="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                      className="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 "
                     >
                       Sign In
                     </a>
@@ -965,7 +928,7 @@ const Userdash = () => {
                   <li>
                     <a
                       href="#"
-                      className="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                      className="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 "
                     >
                       Sign Up
                     </a>
@@ -973,7 +936,7 @@ const Userdash = () => {
                   <li>
                     <a
                       href="#"
-                      className="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                      className="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 "
                     >
                       Forgot Password
                     </a>
@@ -981,15 +944,15 @@ const Userdash = () => {
                 </ul>
               </li>
             </ul>
-            <ul className="pt-5 mt-5 space-y-2 border-t border-gray-200 dark:border-gray-700">
+            <ul className="pt-5 mt-5 space-y-2 border-t border-gray-200 ">
               <li>
                 <a
                   href="#"
-                  className="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group"
+                  className="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100  group"
                 >
                   <svg
                     aria-hidden="true"
-                    className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                    className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 "
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -1007,11 +970,11 @@ const Userdash = () => {
               <li>
                 <a
                   href="#"
-                  className="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group"
+                  className="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100  group"
                 >
                   <svg
                     aria-hidden="true"
-                    className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                    className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 "
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -1024,11 +987,11 @@ const Userdash = () => {
               <li>
                 <a
                   href="#"
-                  className="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group"
+                  className="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100  group"
                 >
                   <svg
                     aria-hidden="true"
-                    className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                    className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 "
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -1044,10 +1007,10 @@ const Userdash = () => {
               </li>
             </ul>
           </div>
-          <div className="hidden absolute bottom-0 left-0 justify-center p-4 space-x-4 w-full lg:flex bg-white dark:bg-gray-800 z-20">
+          <div className="hidden absolute bottom-0 left-0 justify-center p-4 space-x-4 w-full lg:flex bg-white z-20">
             <a
               href="#"
-              className="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-600"
+              className="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 "
             >
               <svg
                 aria-hidden="true"
@@ -1062,7 +1025,7 @@ const Userdash = () => {
             <a
               href="#"
               data-tooltip-target="tooltip-settings"
-              className="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer dark:text-gray-400 dark:hover:text-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600"
+              className="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer  hover:text-gray-900 hover:bg-gray-100 "
             >
               <svg
                 aria-hidden="true"
@@ -1089,7 +1052,7 @@ const Userdash = () => {
             <button
               type="button"
               data-dropdown-toggle="language-dropdown"
-              className="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer dark:hover:text-white dark:text-gray-400 hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600"
+              className="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer  hover:text-gray-900 hover:bg-gray-100 "
             >
               <svg
                 aria-hidden="true"
@@ -1132,14 +1095,14 @@ const Userdash = () => {
             </button>
             {/*-- Dropdown -*/}
             <div
-              className="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700"
+              className="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow "
               id="language-dropdown"
             >
               <ul className="py-1" role="none">
                 <li>
                   <a
                     href="#"
-                    className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:text-white dark:text-gray-300 dark:hover:bg-gray-600"
+                    className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100  "
                     role="menuitem"
                   >
                     <div className="inline-flex items-center">
@@ -1182,7 +1145,7 @@ const Userdash = () => {
                 <li>
                   <a
                     href="#"
-                    className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-600"
+                    className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100  "
                     role="menuitem"
                   >
                     <div className="inline-flex items-center">
@@ -1204,7 +1167,7 @@ const Userdash = () => {
                 <li>
                   <a
                     href="#"
-                    className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-600"
+                    className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100  "
                     role="menuitem"
                   >
                     <div className="inline-flex items-center">
@@ -1228,7 +1191,7 @@ const Userdash = () => {
                 <li>
                   <a
                     href="#"
-                    className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:text-white dark:text-gray-300 dark:hover:bg-gray-600"
+                    className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100  "
                     role="menuitem"
                   >
                     <div className="inline-flex items-center">
@@ -1290,24 +1253,24 @@ const Userdash = () => {
 
         <main className="p-4 md:ml-64 h-auto pt-20">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
-            <div className="border-2 border-dashed border-gray-300 rounded-lg dark:border-gray-600 h-32 md:h-64"></div>
-            <div className="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-32 md:h-64"></div>
-            <div className="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-32 md:h-64"></div>
-            <div className="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-32 md:h-64"></div>
+            <div className="border-2 border-dashed border-gray-300 rounded-lg h-32 md:h-64"></div>
+            <div className="border-2 border-dashed rounded-lg border-gray-300 h-32 md:h-64"></div>
+            <div className="border-2 border-dashed rounded-lg border-gray-300 h-32 md:h-64"></div>
+            <div className="border-2 border-dashed rounded-lg border-gray-300 h-32 md:h-64"></div>
           </div>
-          <div className="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-96 mb-4"></div>
+          <div className="border-2 border-dashed rounded-lg border-gray-300 h-96 mb-4"></div>
           <div className="grid grid-cols-2 gap-4 mb-4">
-            <div className="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"></div>
-            <div className="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"></div>
-            <div className="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"></div>
-            <div className="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"></div>
+            <div className="border-2 border-dashed rounded-lg border-gray-300 h-48 md:h-72"></div>
+            <div className="border-2 border-dashed rounded-lg border-gray-300 h-48 md:h-72"></div>
+            <div className="border-2 border-dashed rounded-lg border-gray-300 h-48 md:h-72"></div>
+            <div className="border-2 border-dashed rounded-lg border-gray-300 h-48 md:h-72"></div>
           </div>
-          <div className="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-96 mb-4"></div>
+          <div className="border-2 border-dashed rounded-lg border-gray-300 h-96 mb-4"></div>
           <div className="grid grid-cols-2 gap-4">
-            <div className="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"></div>
-            <div className="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"></div>
-            <div className="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"></div>
-            <div className="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"></div>
+            <div className="border-2 border-dashed rounded-lg border-gray-300 h-48 md:h-72"></div>
+            <div className="border-2 border-dashed rounded-lg border-gray-300 h-48 md:h-72"></div>
+            <div className="border-2 border-dashed rounded-lg border-gray-300 h-48 md:h-72"></div>
+            <div className="border-2 border-dashed rounded-lg border-gray-300 h-48 md:h-72"></div>
           </div>
         </main>
       </div>

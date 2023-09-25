@@ -1,21 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import Logo from "../assets/FurryPals.png";
-function colapse(x) {
-  var x = document.getElementById("navbar-default");
 
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-}
-const Navbar = () => {
+import { Link } from "react-router-dom";
+import Logo from "../assets/images/FurryPals.png";
+import Mtoggle from "../assets/scripts/menutoggle";
+
+const Navibar = () => {
   return (
     <>
       <header>
         <nav className="bg-white border-gray-200 drop-shadow-lg">
-          <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1">
+          <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1 px-4">
             <a href="" className="flex items-center" as={Link} to="/">
               <img src={Logo} alt="" className="h-24 sm:h-24" />
             </a>
@@ -25,7 +19,7 @@ const Navbar = () => {
               className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
               aria-controls="navbar-default"
               aria-expanded="false"
-              onClick={colapse}
+              onClick={Mtoggle}
             >
               <span className="sr-only">Open main menu</span>
               <svg
@@ -113,4 +107,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navibar;

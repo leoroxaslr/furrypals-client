@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import LoginPic from "../../assets/Veterinary-amico.svg";
+import LoginPic from "../../assets/images/Veterinary-amico.svg";
 import { useRef, useState, useEffect } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
@@ -17,8 +17,8 @@ const Login = () => {
   };
   return (
     <>
-      <section className="bg-white m-16">
-        <div className="grid max-w-screen-2xl px-5 py-8 mx-auto lg:py-16 lg:grid-cols-12">
+      <section className="bg-white m-16 ">
+        <div className="grid max-w-screen-2xl h-screen max-h-[70vh] l py-8 mx-auto lg:py-16 lg:grid-cols-12">
           <div className="hidden place-self-center w-96 lg:mt-0 lg:col-span-7 lg:flex">
             <img className="scale-150" src={LoginPic} alt="face" />
           </div>

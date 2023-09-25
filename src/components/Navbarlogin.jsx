@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "../assets/FurryPals.png";
+import Logo from "../assets/images/FurryPals.png";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../firebase";
 
@@ -27,7 +27,7 @@ const Navbar = () => {
     <>
       <header>
         <nav className="bg-white border-gray-200 drop-shadow-lg">
-          <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1">
+          <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1 px-4">
             <a href="" className="flex items-center" as={Link} to="/">
               <img src={Logo} alt="" className="h-24 sm:h-24" />
             </a>

@@ -1,20 +1,30 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import LoginPic from "../../assets/images/Veterinary-amico.svg";
 import { useRef, useState, useEffect } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
+import { UserAuth } from "../auth/AuthContext";
 
 const Login = () => {
-  const [email, setEmail] = useState(false);
-  const [password, setPassword] = useState(false);
+  const navigate = useNavigate();
+  const { currentUser, signinWithGoogle } = UserAuth();
 
-  const signIn = (e) => {
-    e.preventDefault();
-    signInWithEmailAndPassword(auth, email, password).catch((error) => {
+  const signIn = async (e) => {
+    try {
+      e.preventDefault();
+      await signinWithGoogle();
+    } catch (error) {
       console.log(error);
-    });
+    }
   };
+
+  useEffect(() => {
+    if (currentUser) {
+      navigate("/dashboard");
+    }
+  }, [currentUser]);
+
   return (
     <>
       <section className="bg-white m-16 ">
@@ -28,7 +38,8 @@ const Login = () => {
                 <h1 className="text-3xl mb-10 font-bold leading-tight tracking-tight text-blue-950 md:text-3xl">
                   Login
                 </h1>
-                <form className="space-y-4 md:space-y-6" onSubmit={signIn}>
+
+                <form className="space-y-4 md:space-y-6">
                   <div>
                     <label
                       htmlFor="username"
@@ -87,7 +98,7 @@ const Login = () => {
                   </div>
 
                   <button
-                    type="submit"
+                    onClick={signIn}
                     className="w-full text-white bg-purple-400 hover:bg-yellow-300 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center "
                   >
                     Sign in
@@ -96,13 +107,18 @@ const Login = () => {
                     Don’t have an account yet?
                     <Link
                       as={Link}
-                      to="/apply"
+                      to="/signup"
                       className="pl-1 font-medium text-gray-800 hover:underline"
                     >
                       Sign up
                     </Link>
                   </p>
                 </form>
+                <div className="text-center">
+                  <button onClick={signIn} className="btn w-full btn-primarys ">
+                    Login With Google
+                  </button>
+                </div>
               </div>
             </div>
           </div>

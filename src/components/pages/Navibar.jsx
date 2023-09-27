@@ -1,10 +1,19 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
-import Logo from "../assets/images/FurryPals.png";
-import Mtoggle from "../assets/scripts/menutoggle";
+import Logo from "../../assets/images/FurryPals.png";
+import Mtoggle from "../../assets/scripts/menutoggle";
+import { UserAuth } from "../auth/AuthContext";
 
 const Navibar = () => {
+  const { currentUser, logout } = UserAuth();
+  const handleLogout = async () => {
+    try {
+      await logout();
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <>
       <header>
@@ -90,13 +99,22 @@ const Navibar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-violet-700 md:p-0 "
-                    as={Link}
-                    to="/signin"
-                  >
-                    Login
-                  </Link>
+                  {currentUser ? (
+                    <Link
+                      className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-violet-700 md:p-0 "
+                      onClick={handleLogout}
+                    >
+                      Logout
+                    </Link>
+                  ) : (
+                    <Link
+                      className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-violet-700 md:p-0 "
+                      as={Link}
+                      to="/signin"
+                    >
+                      Login
+                    </Link>
+                  )}
                 </li>
               </ul>
             </div>

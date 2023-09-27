@@ -35,15 +35,13 @@ const SignUp = () => {
 
   useEffect(() => {
     const result = USER_REGEX.test(user);
-    console.log(result);
-    console.log(user);
+
     setValidName(result);
   }, [user]);
 
   useEffect(() => {
     const result = PWD_REGEX.test(pwd);
-    console.log(result);
-    console.log(pwd);
+
     setValidPwd(result);
     const match = pwd === matchPwd;
     setValidMatch(match);
@@ -60,7 +58,7 @@ const SignUp = () => {
   const signUp = (e) => {
     e.preventDefault();
     createUserWithEmailAndPassword(auth, user, pwd).catch((error) => {
-      console.log(error);
+      alert.show(error);
     });
   };
 

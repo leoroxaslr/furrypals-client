@@ -99,7 +99,7 @@ const Login = () => {
 
                   <button
                     onClick={signIn}
-                    className="w-full text-white bg-purple-400 hover:bg-yellow-300 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center "
+                    className="w-full text-white bg-primary hover:bg-yellow-300 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center "
                   >
                     Sign in
                   </button>
@@ -117,7 +117,7 @@ const Login = () => {
                 <div className="text-center">
                   <button
                     onClick={signIn}
-                    className="btn w-full btn-secondary "
+                    className="btn w-full btn-secondary text-white"
                   >
                     Login With Google
                   </button>

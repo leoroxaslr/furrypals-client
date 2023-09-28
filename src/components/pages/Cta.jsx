@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Cta = () => {
   return (
-    <section className="bg-white" id="cta">
+    <section className="bg-base-100" id="cta">
       <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
         <div className="mx-auto max-w-screen-sm text-center">
           <h2 className="mb-4 text-4xl tracking-tight font-extrabold leading-tight text-neutral">

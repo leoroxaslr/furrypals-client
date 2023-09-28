@@ -17,7 +17,7 @@ const Cta = () => {
 
           <Link
             to="/signup"
-            className="text-neutral bg-accent hover:bg-secondary focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
+            className="text-neutral btn btn-wide bg-accent hover:bg-secondary focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
           >
             Free trial for 30 days
           </Link>

@@ -6,41 +6,55 @@ const Pricing = () => {
 
   const packages = [
     {
-      name: "Boarding",
-      dailyPrice: 29,
-      weeklyPrice: 119,
-      description:
-        "Laboriosam quaerat sapiente minima nam minus similique illum architecto et!",
+      name: "Starter",
+      perk1: "1 Teleconsultation",
+      perk2: "5 Chat with Vets sessions",
+      perk3: "5% discount to vaccines and deworming",
+      perk4: "1 Groom-at-Home session",
+      dailyPrice: 699,
+      weeklyPrice: 999,
+      description: "Perfect starting plan for your pet's needs",
       paw: "https://img.icons8.com/cotton/64/000000/dog-footprint.png",
     },
     {
-      name: "Teleconsult",
-      dailyPrice: 39,
-      weeklyPrice: 129,
-      description:
-        "Laboriosam quaerat sapiente minima nam minus similique illum architecto et!",
+      name: "Starter Plus",
+      perk1: "2 Teleconsultation",
+      perk2: "7 Chat with Vets sessions",
+      perk3: "5% discount to vaccines and deworming",
+      perk4: "3 Groom-at-Home session",
+      dailyPrice: 1099,
+      weeklyPrice: 2099,
+      description: "All the perks of starter plan but with much more bonuses",
       paw: "https://img.icons8.com/cotton/64/000000/dog-footprint.png",
     },
     {
-      name: "Grooming",
-      dailyPrice: 19,
-      weeklyPrice: 109,
+      name: "FurryClub",
+      perk1: "Can register up to two pets!",
+      perk2: "2 free home vet visit",
+      perk3: "Unlimited teleconsult sessions",
+      perk4: "10% discount to partner petshops and clinics ",
+      dailyPrice: 2099,
+      weeklyPrice: 3599,
       description:
-        "Laboriosam quaerat sapiente minima nam minus similique illum architecto et!",
+        "All the perks of starter plus plan but with much more bonuses",
       paw: "https://img.icons8.com/cotton/64/000000/dog-footprint.png",
     },
     {
-      name: "Training",
-      dailyPrice: 49,
-      weeklyPrice: 149,
+      name: "FurryClub +",
+      perk1: "Unlimited teleconsult session",
+      perk2: "Register up to five pets!",
+      perk3: "4 free home vet visit",
+      perk4: "10% discount to partner petshops and clinics and more!",
+      dailyPrice: 4999,
+      weeklyPrice: 6999,
       description:
-        "Laboriosam quaerat sapiente minima nam minus similique illum architecto et!",
+        "All the perks of starter plus plan but with much more bonuses",
       paw: "https://img.icons8.com/cotton/64/000000/dog-footprint.png",
     },
   ];
 
   return (
-    <div className="md:px-14 p-4 max-w-s mx-auto py-10" id="pricing">
+    <div className="md:px-14 p-4 mx-auto max-w-screen-xl py-10" id="pricing">
       <div className="text-center">
         <h2 className="md:text-4xl text=2xl font-extrabold text-neutral mb-2">
           Affordable Pet Care Plans Tailored to Your Needs
@@ -79,7 +93,7 @@ const Pricing = () => {
         </div>
       </div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mt-20 md:w-11/12 mx-auto">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mt-20 md:w-12/12 mx-auto">
         {packages.map((pkg, index) => (
           <div
             key={index}
@@ -90,27 +104,27 @@ const Pricing = () => {
             </h2>
             <p className="text-iris text-center my-5">{pkg.description}</p>
             <p className="mt-5 text-center text-iris text-4xl font-bold">
-              {isWeekly ? `$${pkg.weeklyPrice}` : `$${pkg.dailyPrice}`}
+              {isWeekly ? `₱${pkg.weeklyPrice}` : `₱${pkg.dailyPrice}`}
               <span className="text-base text-tertiary font-medium">
-                /{isWeekly ? "week" : "daily"}
+                /{isWeekly ? "Quarterly" : "Monthly"}
               </span>
             </p>
             <ul className="mt-4 space-y-2 px-1">
               <li className="flex gap-3 items-center">
                 <img src={pkg.paw} alt="" className="w-4 h-4" />
-                Free Boarding Bath
+                {pkg.perk1}
               </li>
               <li className="flex gap-3 items-center">
                 <img src={pkg.paw} alt="" className="w-4 h-4" />
-                30 mins Dog Walking
+                {pkg.perk2}
               </li>
               <li className="flex gap-3 items-center">
                 <img src={pkg.paw} alt="" className="w-4 h-4" />
-                Free Food & Treats
+                {pkg.perk3}
               </li>
               <li className="flex gap-3 items-center">
                 <img src={pkg.paw} alt="" className="w-4 h-4" />
-                Premium Pet Accommodation
+                {pkg.perk4}
               </li>
             </ul>
             <div className="w-full mx-auto mt-8 flex items-center justify-center">

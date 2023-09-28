@@ -31,6 +31,27 @@ const Navibar = () => {
   if (shouldHideNavBar) {
     return null; // Return null to hide the NavBar
   }
+  const handleClickScroll = () => {
+    const element = document.getElementById("about");
+    if (element) {
+      // 👇 Will scroll smoothly to the top of the next section
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  const handleClickScroll2 = () => {
+    const element = document.getElementById("/");
+    if (element) {
+      // 👇 Will scroll smoothly to the top of the next section
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  const handleClickScroll3 = () => {
+    const element = document.getElementById("pricing");
+    if (element) {
+      // 👇 Will scroll smoothly to the top of the next section
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <>
       <header>
@@ -73,37 +94,31 @@ const Navibar = () => {
                   <Link
                     className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-200 md:p-0"
                     aria-current="page"
+                    smooth={true}
                     as={Link}
-                    to="/"
+                    onClick={handleClickScroll2}
                   >
                     Home
                   </Link>
                 </li>
                 <li>
                   <Link
+                    smooth={true}
                     className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-200 md:p-0 "
                     as={Link}
-                    to="/about"
+                    onClick={handleClickScroll}
                   >
                     About
                   </Link>
                 </li>
                 <li>
                   <Link
+                    smooth={true}
                     className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-200 md:p-0 "
                     as={Link}
-                    to="/services"
+                    onClick={handleClickScroll3}
                   >
-                    Servicess
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-200 md:p-0 "
-                    as={Link}
-                    to="/contact"
-                  >
-                    Contact
+                    Pricing
                   </Link>
                 </li>
 

@@ -248,10 +248,10 @@ const Userdash = () => {
           <div className="mx-5 max-w-7xl py-6 my-5 sm:px-6 lg:px-8  bg-base-200 rounded-3xl">
             {shouldShowDiv1 ? (
               <div>
-                <div class="grid grid-rows-3 grid-flow-col gap-4">
-                  <div class="row-span-3 ...">01</div>
-                  <div class="col-span-2 ...">02</div>
-                  <div class="row-span-2 col-span-2 ...">03</div>
+                <div className="grid grid-rows-3 grid-flow-col gap-4">
+                  <div className="row-span-3 ...">01</div>
+                  <div className="col-span-2 ...">02</div>
+                  <div className="row-span-2 col-span-2 ...">03</div>
                 </div>{" "}
               </div>
             ) : null}

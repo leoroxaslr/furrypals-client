@@ -40,7 +40,7 @@ const Userdash = () => {
   const userNavigation = [
     { name: "Your Profile", href: "/dashboard/profile" },
     { name: "Settings", href: "/dashboard/settings" },
-    { name: "Sign out", href: "/", onClick: "userSignOut" },
+    { name: "Sign out", onClick: { userSignOut } },
   ];
 
   function classNames(...classes) {
@@ -136,15 +136,15 @@ const Userdash = () => {
                             {userNavigation.map((item) => (
                               <Menu.Item key={item.name}>
                                 {({ active }) => (
-                                  <a
-                                    href={item.href}
+                                  <Link
+                                    to={item.href}
                                     className={classNames(
                                       active ? "bg-white" : "",
                                       "block px-4 py-2 text-sm text-neutral"
                                     )}
                                   >
                                     {item.name}
-                                  </a>
+                                  </Link>
                                 )}
                               </Menu.Item>
                             ))}

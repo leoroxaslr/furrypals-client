@@ -1,6 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  font-family: "Robotos", sans-serif;
+}
 .instructions {
   font-size: 0.75rem;
   border-radius: 0.5rem;

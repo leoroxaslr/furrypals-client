@@ -80,7 +80,6 @@ function App() {
             element={
               <PrivateRoute>
                 <UserDash />
-                <Community />
               </PrivateRoute>
             }
           />

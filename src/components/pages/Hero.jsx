@@ -9,7 +9,7 @@ const Hero = () => {
           <div className="hero-content flex-col lg:flex-row-reverse">
             <img
               src={banner}
-              className="lg:h-[500px] hover:scale-125 ease-in duration-300"
+              className="lg:h-[500px] hover:scale-105 ease-in duration-100"
             />
             <div>
               <h1 className="text-5xl font-bold"> Consult or Visit Us</h1>
@@ -21,7 +21,7 @@ const Hero = () => {
               </p>
               <div className="space-x-5 space-y-4">
                 <button className="btn btn-primary">Sign Up</button>
-                <button className="btn btn-secondary">Learn More...</button>
+                <button className="btn btn-accent ">Learn More</button>
               </div>
             </div>
           </div>

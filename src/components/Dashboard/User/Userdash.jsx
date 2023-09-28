@@ -5,8 +5,9 @@ import { UserAuth } from "../../auth/AuthContext";
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
-import Logo from "../../../assets/images/FurryPals.png";
+import Logo from "../../../assets/images/FurryPalsfooter.png";
 import { Link, useLocation } from "react-router-dom";
+import Community from "./Community";
 
 const userSignOut = () => {
   signOut(auth)
@@ -59,7 +60,7 @@ const Userdash = () => {
   return (
     <>
       <div className="h-32 fixed w-full">
-        <Disclosure as="nav" className="bg-white">
+        <Disclosure as="nav" className="bg-secondary">
           {({ open }) => (
             <>
               <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -69,7 +70,7 @@ const Userdash = () => {
                       <img
                         className="h-24 sm:h-24"
                         src={Logo}
-                        alt="Your Company"
+                        alt="FurryPals Logo"
                       />
                     </div>
                     <div className="hidden md:block">
@@ -80,8 +81,8 @@ const Userdash = () => {
                             to={item.href}
                             className={classNames(
                               item.current
-                                ? "bg-white text-neutral hover:bg-purple-200 rounded-md"
-                                : "bg-white text-neutral hover:bg-purple-200 rounded-md",
+                                ? "bg-secondary text-neutral hover:bg-purple-200 rounded-md"
+                                : "bg-secondary text-neutral hover:bg-purple-200 rounded-md",
                               " px-3 py-2 text-sm font-medium"
                             )}
                             aria-current={item.current ? "page" : undefined}
@@ -230,19 +231,31 @@ const Userdash = () => {
           )}
         </Disclosure>
 
-        <header className="bg-purple-300 shadow">
+        <header className="bg-white shadow">
           <div className="mx-auto max-w-7xl px-4 py-2 sm:px-6 lg:px-8">
-            <h1 className="text-3xl font-bold tracking-tight text-white">
+            <h1 className="text-3xl font-bold tracking-tight text-neutral">
               Dashboard
             </h1>
           </div>
         </header>
         <main>
-          <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8 bg-slate-500 rounded-3xl">
-            {shouldShowDiv1 ? <div>Your div content here1 </div> : null}
+          <div className="mx-5 max-w-7xl py-6 my-5 sm:px-6 lg:px-8  bg-base-300 rounded-3xl">
+            {shouldShowDiv1 ? (
+              <div>
+                <div class="grid grid-rows-3 grid-flow-col gap-4">
+                  <div class="row-span-3 ...">01</div>
+                  <div class="col-span-2 ...">02</div>
+                  <div class="row-span-2 col-span-2 ...">03</div>
+                </div>{" "}
+              </div>
+            ) : null}
             {shouldShowDiv2 ? <div>Your div content here2 </div> : null}
             {shouldShowDiv3 ? <div>Your div content here 3 </div> : null}
-            {shouldShowDiv4 ? <div>Your div content here 4 </div> : null}
+            {shouldShowDiv4 ? (
+              <div>
+                <Community />
+              </div>
+            ) : null}
             {shouldShowDiv5 ? <div>Your div content here 5 </div> : null}
           </div>
         </main>

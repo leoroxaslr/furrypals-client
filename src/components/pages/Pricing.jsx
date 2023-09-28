@@ -41,7 +41,7 @@ const Pricing = () => {
 
   return (
     <div className="md:px-14 p-4 max-w-s mx-auto py-10" id="pricing">
-      <div className="text center">
+      <div className="text-center">
         <h2 className="md:text-4xl text=2xl font-extrabold text-neutral mb-2">
           Affordable Pet Care Plans Tailored to Your Needs
         </h2>
@@ -114,7 +114,9 @@ const Pricing = () => {
               </li>
             </ul>
             <div className="w-full mx-auto mt-8 flex items-center justify-center">
-              <button className="btnPrimary">Pay Now</button>
+              <button className="btn btn-accent text-neutral btn-block">
+                Sign Up
+              </button>
             </div>
           </div>
         ))}

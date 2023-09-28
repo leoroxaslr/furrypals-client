@@ -4,7 +4,7 @@ import AboutImg from "../../assets/images/aboutImg.jpeg";
 const About = () => {
   return (
     <>
-      <section className="mt-32 bg-gray-50 px-4 pb-20 pt-4" id="about">
+      <section className="mt-32  px-4 pb-20 pt-4" id="about">
         <div className="container mx-auto">
           <div className="mt-32 flex flex-wrap items-center">
             <div className="mx-auto mt-24 flex w-full justify-center px-4 md:w-4/12 lg:mt-0">

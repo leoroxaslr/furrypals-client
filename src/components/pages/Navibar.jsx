@@ -15,6 +15,8 @@ const Navibar = () => {
     "/dashboard/grooming",
     "/dashboard/community",
     "/dashboard/pets",
+    "/dashboard/profile",
+    "/dashboard/settings",
   ];
   const shouldHideNavBar = pathsToHideNavBar.includes(location.pathname);
 
@@ -104,9 +106,10 @@ const Navibar = () => {
                     Contact
                   </Link>
                 </li>
-                <li>
-                  {currentUser ? (
-                    <>
+
+                {currentUser ? (
+                  <>
+                    <li>
                       <Link
                         className="block py-2 pl-3 pr-4  text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-200 md:p-0 "
                         as={Link}
@@ -114,14 +117,18 @@ const Navibar = () => {
                       >
                         Dashboard
                       </Link>
+                    </li>
+                    <li>
                       <Link
                         onClick={handleLogout}
                         className="block py-2 pl-3 pr-4  text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-200 md:p-0 "
                       >
                         Logout
                       </Link>
-                    </>
-                  ) : (
+                    </li>
+                  </>
+                ) : (
+                  <li>
                     <Link
                       as={Link}
                       to="/signin"
@@ -129,8 +136,8 @@ const Navibar = () => {
                     >
                       Login
                     </Link>
-                  )}
-                </li>
+                  </li>
+                )}
               </ul>
             </div>
           </div>

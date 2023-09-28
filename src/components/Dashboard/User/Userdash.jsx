@@ -8,11 +8,13 @@ import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import Logo from "../../../assets/images/FurryPalsfooter.png";
 import { Link, useLocation } from "react-router-dom";
 import Community from "./Community";
+import About from "../../pages/About";
+import Profile from "./Profile";
 
 const userSignOut = () => {
   signOut(auth)
     .then(() => {
-      console.log("sign out successful");
+      alert("sign out successful");
     })
     .catch((error) => console.log(error));
 };
@@ -36,9 +38,9 @@ const Userdash = () => {
     { name: "FurryPals", href: "/dashboard/pets", current: false },
   ];
   const userNavigation = [
-    { name: "Your Profile", href: "/profile" },
-    { name: "Settings", href: "/settings" },
-    { name: "Sign out", href: "/", onClick: { userSignOut } },
+    { name: "Your Profile", href: "/dashboard/profile" },
+    { name: "Settings", href: "/dashboard/settings" },
+    { name: "Sign out", href: "/", onClick: "userSignOut" },
   ];
 
   function classNames(...classes) {
@@ -50,12 +52,16 @@ const Userdash = () => {
   const routesToShowDiv3 = ["/dashboard/grooming"];
   const routesToShowDiv4 = ["/dashboard/community"];
   const routesToShowDiv5 = ["/dashboard/pets"];
+  const routesToShowDiv6 = ["/dashboard/profile"];
+  const routesToShowDiv7 = ["/dashboard/settings"];
 
   const shouldShowDiv1 = routesToShowDiv1.includes(location.pathname);
   const shouldShowDiv2 = routesToShowDiv2.includes(location.pathname);
   const shouldShowDiv3 = routesToShowDiv3.includes(location.pathname);
   const shouldShowDiv4 = routesToShowDiv4.includes(location.pathname);
   const shouldShowDiv5 = routesToShowDiv5.includes(location.pathname);
+  const shouldShowDiv6 = routesToShowDiv6.includes(location.pathname);
+  const shouldShowDiv7 = routesToShowDiv7.includes(location.pathname);
 
   return (
     <>
@@ -239,7 +245,7 @@ const Userdash = () => {
           </div>
         </header>
         <main>
-          <div className="mx-5 max-w-7xl py-6 my-5 sm:px-6 lg:px-8  bg-base-300 rounded-3xl">
+          <div className="mx-5 max-w-7xl py-6 my-5 sm:px-6 lg:px-8  bg-base-200 rounded-3xl">
             {shouldShowDiv1 ? (
               <div>
                 <div class="grid grid-rows-3 grid-flow-col gap-4">
@@ -257,6 +263,12 @@ const Userdash = () => {
               </div>
             ) : null}
             {shouldShowDiv5 ? <div>Your div content here 5 </div> : null}
+            {shouldShowDiv6 ? (
+              <div className="">
+                <Profile />
+              </div>
+            ) : null}
+            {shouldShowDiv7 ? <div>Your div content here 7 </div> : null}
           </div>
         </main>
       </div>

@@ -1,5 +1,7 @@
 import React from "react";
 import banner from "../../assets/images/banner.png";
+import pawR from "../../assets/images/paw_side_img3.png";
+import pawL from "../../assets/images/paw_side_img2.png";
 
 const Hero = () => {
   return (
@@ -24,6 +26,11 @@ const Hero = () => {
                 <button className="btn btn-accent ">Learn More</button>
               </div>
             </div>
+            <img
+              src={pawR}
+              className="absolute right-0 top-1/2 h-72"
+              alt="paw R"
+            />
           </div>
         </div>
       </div>

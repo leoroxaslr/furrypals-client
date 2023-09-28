@@ -11,6 +11,8 @@ const Footer = () => {
     "/dashboard/grooming",
     "/dashboard/community",
     "/dashboard/pets",
+    "/dashboard/profile",
+    "/dashboard/settings",
   ];
   const shouldHideFooter = pathsToHideFooter.includes(location.pathname);
 

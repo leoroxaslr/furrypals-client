@@ -58,6 +58,30 @@ function App() {
             }
           />
           <Route
+            path="/dashboard/settings"
+            element={
+              <PrivateRoute>
+                <UserDash />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/dashboard/profile"
+            element={
+              <PrivateRoute>
+                <UserDash />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/dashboard"
+            element={
+              <PrivateRoute>
+                <UserDash />
+              </PrivateRoute>
+            }
+          />
+          <Route
             path="/dashboard/consultation"
             element={
               <PrivateRoute>

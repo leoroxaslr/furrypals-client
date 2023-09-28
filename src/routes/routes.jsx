@@ -27,6 +27,10 @@ const routes = [
     element: <Services />,
   },
   {
+    path: "/home",
+    element: <Home />,
+  },
+  {
     path: "/",
     element: <Home />,
   },

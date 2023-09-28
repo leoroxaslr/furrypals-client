@@ -1,7 +1,5 @@
 import React from "react";
 import banner from "../../assets/images/banner.png";
-import pawR from "../../assets/images/paw_side_img3.png";
-import pawL from "../../assets/images/paw_side_img2.png";
 
 const Hero = () => {
   return (
@@ -14,7 +12,9 @@ const Hero = () => {
               className="lg:h-[500px] hover:scale-105 ease-in duration-100"
             />
             <div>
-              <h1 className="text-5xl font-bold"> Consult or Visit Us</h1>
+              <h1 className="text-5xl font-bold md:text-7xl">
+                Hollistic Pet Experience
+              </h1>
               <p className="py-6 text-neutral">
                 At FurryPal, we're all about ensuring your furry friends live
                 their happiest, healthiest lives. Our dedicated team provides
@@ -26,11 +26,6 @@ const Hero = () => {
                 <button className="btn btn-accent ">Learn More</button>
               </div>
             </div>
-            <img
-              src={pawR}
-              className="absolute right-0 top-1/2 h-72"
-              alt="paw R"
-            />
           </div>
         </div>
       </div>

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 * {
-  font-family: "Robotos", sans-serif;
+  font-family: "Mulish", sans-serif;
 }
 .instructions {
   font-size: 0.75rem;

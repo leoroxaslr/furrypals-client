@@ -1,12 +1,12 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
-import Logo from "../../assets/images/FurryPals.png";
+import Logo from "../../assets/images/FurryPalsfooter.png";
 import Mtoggle from "../../assets/scripts/menutoggle";
 import { UserAuth } from "../auth/AuthContext";
 
 const Navibar = () => {
   const { currentUser, logout } = UserAuth();
+
   const handleLogout = async () => {
     try {
       await logout();
@@ -17,7 +17,7 @@ const Navibar = () => {
   return (
     <>
       <header>
-        <nav className="bg-white border-gray-200 drop-shadow-lg">
+        <nav className="bg-secondary border-gray-200 drop-shadow-lg">
           <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1 px-4">
             <a href="" className="flex items-center" as={Link} to="/">
               <img src={Logo} alt="" className="h-24 sm:h-24" />
@@ -51,10 +51,10 @@ const Navibar = () => {
               className="hidden w-full md:block md:w-auto"
               id="navbar-default"
             >
-              <ul className="font-medium flex flex-col text-violet-700 p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white ">
+              <ul className="font-medium flex flex-colp-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
                 <li>
                   <Link
-                    className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-violet-700 md:p-0"
+                    className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-200 md:p-0"
                     aria-current="page"
                     as={Link}
                     to="/"
@@ -64,7 +64,7 @@ const Navibar = () => {
                 </li>
                 <li>
                   <Link
-                    className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-violet-700 md:p-0 "
+                    className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-200 md:p-0 "
                     as={Link}
                     to="/about"
                   >
@@ -73,25 +73,16 @@ const Navibar = () => {
                 </li>
                 <li>
                   <Link
-                    className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-violet-700 md:p-0 "
+                    className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-200 md:p-0 "
                     as={Link}
                     to="/services"
                   >
-                    Services
+                    Servicess
                   </Link>
                 </li>
                 <li>
                   <Link
-                    className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-violet-700 md:p-0 "
-                    as={Link}
-                    to="/pricing"
-                  >
-                    Pricing
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-violet-700 md:p-0 "
+                    className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-200 md:p-0 "
                     as={Link}
                     to="/contact"
                   >
@@ -100,17 +91,26 @@ const Navibar = () => {
                 </li>
                 <li>
                   {currentUser ? (
-                    <Link
-                      className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-violet-700 md:p-0 "
-                      onClick={handleLogout}
-                    >
-                      Logout
-                    </Link>
+                    <>
+                      <Link
+                        className="block py-2 pl-3 pr-4  text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-200 md:p-0 "
+                        as={Link}
+                        to="/dashboard"
+                      >
+                        Dashboard
+                      </Link>
+                      <Link
+                        onClick={handleLogout}
+                        className="block py-2 pl-3 pr-4  text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-200 md:p-0 "
+                      >
+                        Logout
+                      </Link>
+                    </>
                   ) : (
                     <Link
-                      className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-violet-700 md:p-0 "
                       as={Link}
                       to="/signin"
+                      className="block py-2 pl-3 pr-4  text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-200 md:p-0 "
                     >
                       Login
                     </Link>

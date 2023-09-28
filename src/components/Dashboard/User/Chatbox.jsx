@@ -7,7 +7,7 @@ import {
   onSnapshot,
   limit,
 } from "firebase/firestore";
-import { db } from "../../firebase";
+import { db } from "../../../firebase";
 
 const Chatbox = () => {
   const messagesEndRef = useRef();
@@ -20,11 +20,7 @@ const Chatbox = () => {
   useEffect(scrollToBottom, [messages]);
 
   useEffect(() => {
-    const q = query(
-      collection(db, "messages"),
-      orderBy("createdAt"),
-      limit(50)
-    );
+    const q = query(collection(db, "messages"), orderBy("createdAt"));
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
       const messages = [];
       querySnapshot.forEach((doc) => {
@@ -37,7 +33,7 @@ const Chatbox = () => {
   }, []);
 
   return (
-    <div className="pb-44 pt-20 containerWrap">
+    <div className="pb-44 mb-24 pt-20 containerWrap">
       {messages.map((message) => (
         <Message key={message.id} message={message} />
       ))}

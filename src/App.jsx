@@ -10,7 +10,7 @@ import SignUp from "./components/auth/SignUp";
 import Navibar from "./components/pages/Navibar";
 import Footer from "./components/pages/Footer";
 import routes from "./routes/routes";
-
+import Notfound from "./components/pages/Notfound";
 function App() {
   const [authUser, setAuthUser] = useState(null);
 
@@ -43,6 +43,16 @@ function App() {
               />
             );
           })}
+
+          <Route path="*" element={<Notfound />} />
+          <Route
+            path="/dashboard"
+            element={
+              <PrivateRoute>
+                <UserDash />
+              </PrivateRoute>
+            }
+          />
         </Routes>
         <Footer />
       </AuthProvider>

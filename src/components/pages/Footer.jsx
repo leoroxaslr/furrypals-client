@@ -1,7 +1,16 @@
 import React from "react";
 import Logo from "../../assets/images/FurryPalsfooter.png";
+import { useLocation } from "react-router-dom";
 
 const Footer = () => {
+  const location = useLocation();
+  const pathsToHideFooter = ["/dashboard", "/dashboard/*"];
+  const shouldHideFooter = pathsToHideFooter.includes(location.pathname);
+
+  if (shouldHideFooter) {
+    return null; // Return null to hide the NavBar
+  }
+
   return (
     <>
       <footer className="p-4 bg-primary sm:p-6">

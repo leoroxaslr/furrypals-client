@@ -27,10 +27,6 @@ const routes = [
     element: <Services />,
   },
   {
-    path: "/dashboard",
-    element: <Userdash />,
-  },
-  {
     path: "/",
     element: <Home />,
   },

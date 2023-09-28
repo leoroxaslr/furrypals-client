@@ -16,7 +16,15 @@ const Message = ({ message }) => {
           </div>
         </div>
         <div className="chat-header">{message.name}</div>
-        <div className="chat-bubble">{message.text}</div>
+        <div
+          className={`chat-bubble ${
+            message.uid === currentUser.uid
+              ? "chat-bubble-secondary"
+              : "chat-bubble-primary"
+          }`}
+        >
+          {message.text}
+        </div>
         <div className="chat-footer opacity-50">Delivered</div>
       </div>
     </>

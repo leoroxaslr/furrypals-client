@@ -1,7 +1,5 @@
-module.exports = {
-  content: ["./src/**/*.{js,ts,jsx,tsx}"],
-  daisyui: {
-    themes: ["cupcake"],
-  },
-  plugins: [require("daisyui")],
+export const content = ["./src/**/*.{js,ts,jsx,tsx}"];
+export const daisyui = {
+  themes: ["cupcake"],
 };
+export const plugins = [require("daisyui")];

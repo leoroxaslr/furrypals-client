@@ -33,15 +33,13 @@ const SendMessage = () => {
         createdAt: serverTimestamp(),
         uid,
       });
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
     setValue("");
   };
 
   return (
     <>
-      <div className=" rounded-full w-full py-2 bg-gray-500">
+      <div className="rounded-full py-2 my-2 bg-neutral">
         <form className="containerWrap flex px-2" onSubmit={handleSendMessage}>
           <input
             className="input w-full focus:outline-none bg-gray-100 rounded-r-none"
@@ -49,7 +47,7 @@ const SendMessage = () => {
             value={value}
             onChange={(e) => setValue(e.target.value)}
           />
-          <button className="w-auto bg-gray-500 text-white rounded-r-lg px-3 text-sm">
+          <button className="w-auto bg-neutral text-white rounded-r-lg px-3 text-sm">
             Send
           </button>
         </form>

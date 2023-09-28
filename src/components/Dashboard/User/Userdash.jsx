@@ -10,6 +10,9 @@ import { Link, useLocation } from "react-router-dom";
 import Community from "./Community";
 import About from "../../pages/About";
 import Profile from "./Profile";
+import Settings from "./Settings";
+import Chatbox from "../User/Chatbox";
+import SendMessage from "../User/SendMessage";
 
 const userSignOut = () => {
   signOut(auth)
@@ -103,7 +106,7 @@ const Userdash = () => {
                     <div className="ml-4 flex items-center md:ml-6">
                       <button
                         type="button"
-                        className="relative rounded-full bg-white p-1 text-neutral hover:text-purple focus:outline-none focus:ring-2 focus:ring-purple focus:ring-offset-2 focus:ring-offset-purple-300"
+                        className="relative rounded-full bg-secondary p-1 text-whtie hover:text-neutral sfocus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-primary"
                       >
                         <span className="absolute -inset-1.5" />
                         <span className="sr-only">View notifications</span>
@@ -244,31 +247,62 @@ const Userdash = () => {
             </h1>
           </div>
         </header>
+
         <main>
-          <div className="mx-5 max-w-7xl py-6 my-5 sm:px-6 lg:px-8  bg-base-200 rounded-3xl">
-            {shouldShowDiv1 ? (
-              <div>
-                <div className="grid grid-rows-3 grid-flow-col gap-4">
-                  <div className="row-span-3 ...">01</div>
-                  <div className="col-span-2 ...">02</div>
-                  <div className="row-span-2 col-span-2 ...">03</div>
-                </div>{" "}
-              </div>
-            ) : null}
-            {shouldShowDiv2 ? <div>Your div content here2 </div> : null}
-            {shouldShowDiv3 ? <div>Your div content here 3 </div> : null}
-            {shouldShowDiv4 ? (
-              <div>
-                <Community />
-              </div>
-            ) : null}
-            {shouldShowDiv5 ? <div>Your div content here 5 </div> : null}
-            {shouldShowDiv6 ? (
-              <div className="">
-                <Profile />
-              </div>
-            ) : null}
-            {shouldShowDiv7 ? <div>Your div content here 7 </div> : null}
+          <div className="mx-auto max-w-7xl h-[40vh] py-6 my-5 sm:px-6 lg:px-8  bg-base-200 rounded-3xl flex flex-row">
+            <div className="flex-row">
+              <h1 className="text-3xl font-bold tracking-tight text-neutral">
+                Your Pet Profile
+              </h1>
+              <img
+                className="h-20 w-20 mb-4 mt-4 rounded-full"
+                src={user.imageUrl}
+                alt=""
+              />
+            </div>
+            <h1 className="text-3xl mx-auto text-center font-bold tracking-tight text-neutral">
+              {user.name}
+            </h1>
+
+            <div className="mx-auto max-w-7xl  py-6 my-5 sm:px-6 lg:px-8  relative -bottom-full"></div>
+            <div className="max-w-7xl h-[30vh] py-6 my-5  bg-base-200 rounded-3xl fixed -bottom-0 right-10">
+              {shouldShowDiv1 ? (
+                <div className="flex-row w-auto px-5">
+                  <Chatbox />
+                  <SendMessage />
+                </div>
+              ) : null}
+              {shouldShowDiv2 ? (
+                <div className="mx-auto max-w-full">
+                  Your div content here2{" "}
+                </div>
+              ) : null}
+              {shouldShowDiv3 ? (
+                <div className="mx-auto max-w-full">
+                  Your div content here 3{" "}
+                </div>
+              ) : null}
+              {shouldShowDiv4 ? (
+                <div>
+                  <Community />
+                </div>
+              ) : null}
+              {shouldShowDiv5 ? (
+                <div className="mx-auto max-w-full">
+                  Your div content here 5{" "}
+                </div>
+              ) : null}
+              {shouldShowDiv6 ? (
+                <div className="">
+                  <Profile />
+                </div>
+              ) : null}
+              {shouldShowDiv7 ? (
+                <div className="mx-auto max-w-full">
+                  <Settings />{" "}
+                </div>
+              ) : null}
+            </div>
           </div>
         </main>
       </div>

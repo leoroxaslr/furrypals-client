@@ -4,7 +4,14 @@ import { useLocation } from "react-router-dom";
 
 const Footer = () => {
   const location = useLocation();
-  const pathsToHideFooter = ["/dashboard", "/dashboard/*"];
+  const pathsToHideFooter = [
+    "/dashboard",
+    "/dashboard/overview",
+    "/dashboard/consultation",
+    "/dashboard/grooming",
+    "/dashboard/community",
+    "/dashboard/pets",
+  ];
   const shouldHideFooter = pathsToHideFooter.includes(location.pathname);
 
   if (shouldHideFooter) {

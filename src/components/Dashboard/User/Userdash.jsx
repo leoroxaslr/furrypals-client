@@ -6,7 +6,7 @@ import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import Logo from "../../../assets/images/FurryPals.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const userSignOut = () => {
   signOut(auth)
@@ -16,8 +16,9 @@ const userSignOut = () => {
     .catch((error) => console.log(error));
 };
 
-const Userdash = (message) => {
+const Userdash = () => {
   const { currentUser } = UserAuth();
+  const location = useLocation();
 
   const user = {
     name: currentUser.displayName,
@@ -26,12 +27,12 @@ const Userdash = (message) => {
   };
 
   const navigation = [
-    { name: "Dashboard", href: "/dashboard", current: true },
     { name: "Home", href: "/", current: false },
-    { name: " Consultation", href: "/consultation", current: false },
-    { name: "Grooming", href: "/grooming", current: false },
-    { name: "Community", href: "/community", current: false },
-    { name: "FurryPals", href: "/pets", current: false },
+    { name: "Dashboard", href: "/dashboard/overview", current: true },
+    { name: " Consultation", href: "/dashboard/consultation", current: false },
+    { name: "Grooming", href: "/dashboard/grooming", current: false },
+    { name: "Community", href: "/dashboard/community", current: false },
+    { name: "FurryPals", href: "/dashboard/pets", current: false },
   ];
   const userNavigation = [
     { name: "Your Profile", href: "/profile" },
@@ -43,18 +44,21 @@ const Userdash = (message) => {
     return classes.filter(Boolean).join(" ");
   }
 
+  const routesToShowDiv1 = ["/dashboard/overview"];
+  const routesToShowDiv2 = ["/dashboard/consultation"];
+  const routesToShowDiv3 = ["/dashboard/grooming"];
+  const routesToShowDiv4 = ["/dashboard/community"];
+  const routesToShowDiv5 = ["/dashboard/pets"];
+
+  const shouldShowDiv1 = routesToShowDiv1.includes(location.pathname);
+  const shouldShowDiv2 = routesToShowDiv2.includes(location.pathname);
+  const shouldShowDiv3 = routesToShowDiv3.includes(location.pathname);
+  const shouldShowDiv4 = routesToShowDiv4.includes(location.pathname);
+  const shouldShowDiv5 = routesToShowDiv5.includes(location.pathname);
+
   return (
     <>
-      {/*
-        This example requires updating your template:
-
-        ```
-        <html className="h-full bg-gray-100">
-        <body className="h-full">
-        ```
-      */}
-
-      <div className="min-h-full fixed w-full">
+      <div className="h-32 fixed w-full">
         <Disclosure as="nav" className="bg-white">
           {({ open }) => (
             <>
@@ -234,7 +238,13 @@ const Userdash = (message) => {
           </div>
         </header>
         <main>
-          <div className="mx-auto w-full py-5 sm:px-6 lg:px-8 h-fit bg-white rounded-3xl"></div>
+          <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8 bg-slate-500 rounded-3xl">
+            {shouldShowDiv1 ? <div>Your div content here1 </div> : null}
+            {shouldShowDiv2 ? <div>Your div content here2 </div> : null}
+            {shouldShowDiv3 ? <div>Your div content here 3 </div> : null}
+            {shouldShowDiv4 ? <div>Your div content here 4 </div> : null}
+            {shouldShowDiv5 ? <div>Your div content here 5 </div> : null}
+          </div>
         </main>
       </div>
     </>

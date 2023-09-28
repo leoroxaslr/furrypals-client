@@ -8,7 +8,14 @@ const Navibar = () => {
   const { currentUser, logout } = UserAuth();
   const location = useLocation();
 
-  const pathsToHideNavBar = ["/dashboard", "/dashboard/*"];
+  const pathsToHideNavBar = [
+    "/dashboard",
+    "/dashboard/overview",
+    "/dashboard/consultation",
+    "/dashboard/grooming",
+    "/dashboard/community",
+    "/dashboard/pets",
+  ];
   const shouldHideNavBar = pathsToHideNavBar.includes(location.pathname);
 
   const handleLogout = async () => {
@@ -103,7 +110,7 @@ const Navibar = () => {
                       <Link
                         className="block py-2 pl-3 pr-4  text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-200 md:p-0 "
                         as={Link}
-                        to="/dashboard"
+                        to="/dashboard/overview"
                       >
                         Dashboard
                       </Link>

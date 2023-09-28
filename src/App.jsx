@@ -11,6 +11,11 @@ import Navibar from "./components/pages/Navibar";
 import Footer from "./components/pages/Footer";
 import routes from "./routes/routes";
 import Notfound from "./components/pages/Notfound";
+import Pets from "./components/Dashboard/User/Pets";
+import Community from "./components/Dashboard/User/Community";
+import Grooming from "./components/Dashboard/User/Grooming";
+import Consultation from "./components/Dashboard/User/Consultation";
+
 function App() {
   const [authUser, setAuthUser] = useState(null);
 
@@ -44,15 +49,51 @@ function App() {
             );
           })}
 
-          <Route path="*" element={<Notfound />} />
           <Route
-            path="/dashboard"
+            path="/dashboard/overview"
             element={
               <PrivateRoute>
                 <UserDash />
               </PrivateRoute>
             }
           />
+          <Route
+            path="/dashboard/consultation"
+            element={
+              <PrivateRoute>
+                <UserDash />
+                <Consultation />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/dashboard/grooming"
+            element={
+              <PrivateRoute>
+                <UserDash />
+                <Grooming />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/dashboard/community"
+            element={
+              <PrivateRoute>
+                <UserDash />
+                <Community />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/dashboard/pets"
+            element={
+              <PrivateRoute>
+                <UserDash />
+                <Pets />
+              </PrivateRoute>
+            }
+          />
+          <Route path="*" element={<Notfound />} />
         </Routes>
         <Footer />
       </AuthProvider>

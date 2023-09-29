@@ -4,8 +4,8 @@ import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 const Settings = () => {
   return (
     <>
-      <form>
-        <div className="space-y-12">
+      <form className=" justify-center max-w-7xl mx-auto bg-white p-5 m-5 rounded-lg shadow-2xl">
+        <div className="space-y-12 ">
           <div className="border-b border-gray-900/10 pb-12">
             <h2 className="text-base font-semibold leading-7 text-gray-900">
               Profile

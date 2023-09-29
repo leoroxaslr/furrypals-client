@@ -250,10 +250,7 @@ const Userdash = () => {
 
         <main>
           {shouldShowDiv1 ? (
-            <div
-              className="flex-row w-auto px-5 right-0 bottom-0 fixed bg-slate-200 rounded-3xl shadow-lg
-            "
-            >
+            <div className="flex-row w-auto px-5 right-5 bottom-2 fixed bg-white rounded-3xl shadow-2xl">
               <Chatbox />
               <SendMessage />
             </div>
@@ -301,7 +298,7 @@ const Userdash = () => {
           ) : null}
           {shouldShowDiv7 ? (
             <div className="mx-auto max-w-full">
-              <Settings />{" "}
+              <Settings />
             </div>
           ) : null}
         </main>

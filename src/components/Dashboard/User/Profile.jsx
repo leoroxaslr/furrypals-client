@@ -10,7 +10,7 @@ const Profile = () => {
     imageUrl: currentUser.photoURL,
   };
   return (
-    <div>
+    <div className="max-w-7xl mx-auto py-10 bg-white p-20 m-20 rounded-lg shadow-2xl">
       <div className="px-4 sm:px-0">
         <img
           className="h-20 w-20 mb-4 rounded-full"

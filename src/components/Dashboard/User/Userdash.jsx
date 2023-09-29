@@ -259,7 +259,7 @@ const Userdash = () => {
             </div>
           ) : null}
           {shouldShowDiv2 ? (
-            <div className="mx-auto max-w-full text-center align-middle ">
+            <div className="mx-auto max-w-full text-center  text-6xl mt-10">
               <div>
                 <h1> Book a Consulation </h1>
               </div>

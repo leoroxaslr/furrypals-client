@@ -249,61 +249,39 @@ const Userdash = () => {
         </header>
 
         <main>
-          <div className="mx-auto max-w-7xl h-[40vh] py-6 my-5 sm:px-6 lg:px-8  bg-base-200 rounded-3xl flex flex-row">
-            <div className="flex-row">
-              <h1 className="text-3xl font-bold tracking-tight text-neutral">
-                Your Pet Profile
-              </h1>
-              <img
-                className="h-20 w-20 mb-4 mt-4 rounded-full"
-                src={user.imageUrl}
-                alt=""
-              />
+          {shouldShowDiv1 ? (
+            <div
+              className="flex-row w-auto px-5 right-0 bottom-0 fixed bg-slate-100 rounded-r-lg shadow-lg
+            "
+            >
+              <Chatbox />
+              <SendMessage />
             </div>
-            <h1 className="text-3xl mx-auto text-center font-bold tracking-tight text-neutral">
-              {user.name}
-            </h1>
-
-            <div className="mx-auto max-w-7xl  py-6 my-5 sm:px-6 lg:px-8  relative -bottom-full"></div>
-            <div className="max-w-7xl h-[30vh] py-6 my-5  bg-base-200 rounded-3xl fixed -bottom-0 right-10">
-              {shouldShowDiv1 ? (
-                <div className="flex-row w-auto px-5">
-                  <Chatbox />
-                  <SendMessage />
-                </div>
-              ) : null}
-              {shouldShowDiv2 ? (
-                <div className="mx-auto max-w-full">
-                  Your div content here2{" "}
-                </div>
-              ) : null}
-              {shouldShowDiv3 ? (
-                <div className="mx-auto max-w-full">
-                  Your div content here 3{" "}
-                </div>
-              ) : null}
-              {shouldShowDiv4 ? (
-                <div>
-                  <Community />
-                </div>
-              ) : null}
-              {shouldShowDiv5 ? (
-                <div className="mx-auto max-w-full">
-                  Your div content here 5{" "}
-                </div>
-              ) : null}
-              {shouldShowDiv6 ? (
-                <div className="">
-                  <Profile />
-                </div>
-              ) : null}
-              {shouldShowDiv7 ? (
-                <div className="mx-auto max-w-full">
-                  <Settings />{" "}
-                </div>
-              ) : null}
+          ) : null}
+          {shouldShowDiv2 ? (
+            <div className="mx-auto max-w-full">Your div content here2 </div>
+          ) : null}
+          {shouldShowDiv3 ? (
+            <div className="mx-auto max-w-full">Your div content here 3 </div>
+          ) : null}
+          {shouldShowDiv4 ? (
+            <div>
+              <Community />
             </div>
-          </div>
+          ) : null}
+          {shouldShowDiv5 ? (
+            <div className="mx-auto max-w-full">Your div content here 5 </div>
+          ) : null}
+          {shouldShowDiv6 ? (
+            <div className="">
+              <Profile />
+            </div>
+          ) : null}
+          {shouldShowDiv7 ? (
+            <div className="mx-auto max-w-full">
+              <Settings />{" "}
+            </div>
+          ) : null}
         </main>
       </div>
     </>

@@ -251,7 +251,7 @@ const Userdash = () => {
         <main>
           {shouldShowDiv1 ? (
             <div
-              className="flex-row w-auto px-5 right-0 bottom-0 fixed bg-slate-100 rounded-r-lg shadow-lg
+              className="flex-row w-auto px-5 right-0 bottom-0 fixed bg-slate-200 rounded-3xl shadow-lg
             "
             >
               <Chatbox />
@@ -266,15 +266,33 @@ const Userdash = () => {
             </div>
           ) : null}
           {shouldShowDiv3 ? (
-            <div className="mx-auto max-w-full">Your div content here 3 </div>
+            <div className="mx-auto max-w-full">
+              {" "}
+              <div className="mx-auto max-w-full text-center  text-6xl mt-10">
+                <div>
+                  <h1> Book a Grooming Service </h1>
+                </div>
+              </div>{" "}
+            </div>
           ) : null}
           {shouldShowDiv4 ? (
             <div>
-              <Community />
+              <div className="mx-auto max-w-full text-center  text-6xl mt-10">
+                <div>
+                  <h1> Community </h1>
+                </div>
+              </div>
             </div>
           ) : null}
           {shouldShowDiv5 ? (
-            <div className="mx-auto max-w-full">Your div content here 5 </div>
+            <div className="mx-auto max-w-full">
+              {" "}
+              <div className="mx-auto max-w-full text-center  text-6xl mt-10">
+                <div>
+                  <h1> Join the FurryPals Club </h1>
+                </div>
+              </div>{" "}
+            </div>
           ) : null}
           {shouldShowDiv6 ? (
             <div className="">

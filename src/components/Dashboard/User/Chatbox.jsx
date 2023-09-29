@@ -33,12 +33,17 @@ const Chatbox = () => {
   }, []);
 
   return (
-    <div className="p-1 h-80 overflow-y-auto">
-      {messages.map((message) => (
-        <Message key={message.id} message={message} />
-      ))}
-      <div ref={messagesEndRef}></div>
-    </div>
+    <>
+      <div className="bg-slate-600 p-3 w-full text-lg text-white px-5 rounded-full">
+        <h3>Dr.Mekus Mekus</h3>
+      </div>
+      <div className="p-1 h-80 overflow-y-auto">
+        {messages.map((message) => (
+          <Message key={message.id} message={message} />
+        ))}
+        <div ref={messagesEndRef}></div>
+      </div>
+    </>
   );
 };
 
